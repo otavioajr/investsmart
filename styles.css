@@ -1,0 +1,305 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #2c2f33;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  padding-top: 80px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* SCOREBOARD FIXO NO TOPO */
+.scoreboard {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #424549;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  z-index: 9999;
+}
+
+.score-box {
+  border: 1px solid #fff;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.score-title {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.score-value {
+  font-size: 20px;
+  font-weight: bold;
+  color: #f1c40f;
+}
+
+/* SEÇÃO DE ANÁLISE (CRITÉRIOS) */
+.analysis-section {
+  background: #424549;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.analysis-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.ativo-input {
+  display: flex;
+  align-items: center;
+}
+
+.ativo-input label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.ativo-input input[type="text"] {
+  padding: 5px;
+  border-radius: 4px;
+  border: none;
+  width: 200px;
+}
+
+.question-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #3b3e42;
+  border-radius: 8px;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+}
+
+.question-label {
+  flex: 1;
+  margin-right: 10px;
+  font-weight: bold;
+  cursor: text;
+}
+
+/* Switch Toggle */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #fff;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #f1c40f;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Botões */
+.remove-btn {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.remove-btn:hover {
+  background: #c0392b;
+}
+
+.edit-btn {
+  background: #3498db;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.edit-btn:hover {
+  background: #2980b9;
+}
+
+td .edit-btn, td .remove-btn {
+  display: inline-block;
+  margin: 0 2px;
+}
+
+.add-empresa-btn, .add-question-btn, .save-criteria-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #f1c40f;
+  color: #2c2f33;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-empresa-btn:hover, .add-question-btn:hover, .save-criteria-btn:hover {
+  background: #dab10c;
+}
+
+/* TABELA DE EMPRESAS */
+.empresas-section {
+  background: #424549;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+
+thead tr {
+  background: #3b3e42;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #555;
+}
+
+th {
+  font-weight: bold;
+}
+
+tr:hover {
+  background: #3c3f43;
+}
+
+td[contenteditable="true"] {
+  background: #55585c;
+  cursor: text;
+}
+
+.total-recomendado {
+  text-align: right;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.total-recomendado span {
+  color: #f1c40f;
+}
+
+/* Botões de Edição */
+.save-btn, .cancel-btn {
+  background: #2ecc71;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+  display: none;
+}
+
+.cancel-btn {
+  background: #e74c3c;
+}
+
+.save-btn:hover {
+  background: #27ae60;
+}
+
+.cancel-btn:hover {
+  background: #c0392b;
+}
+
+.question-label:focus {
+  outline: 2px solid #3498db;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+.action-buttons-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.save-edit-btn, .cancel-edit-btn {
+  display: none;
+}
+
+.save-edit-btn:hover {
+  background: #27ae60 !important;
+}
+
+.cancel-edit-btn:hover {
+  background: #c0392b !important;
+}
+
+.add-empresa-btn {
+  display: block;
+  margin-top: 20px;
+} 

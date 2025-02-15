@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Minha Análise Unificada (Compat Version)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- SCOREBOARD FIXO NO TOPO -->
+  <div class="scoreboard">
+    <div class="score-box">
+      <span class="score-title">Pontos positivos</span>
+      <span id="pontosPositivos" class="score-value">0</span>
+    </div>
+    <div class="score-box">
+      <span class="score-title">Pontos negativos</span>
+      <span id="pontosNegativos" class="score-value">0</span>
+    </div>
+    <div class="score-box">
+      <span class="score-title">Pontuação final</span>
+      <span id="pontuacaoFinal" class="score-value">0</span>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Minha Análise Unificada (Compat Version)</h1>
+
+    <!-- SEÇÃO DE ANÁLISE (CRITÉRIOS) -->
+    <div class="analysis-section">
+      <div class="analysis-header">
+        <div class="ativo-input">
+          <label for="nomeAtivo">Nome do Ativo:</label>
+          <input type="text" id="nomeAtivo" placeholder="Ex: PETR4, VALE3...">
+        </div>
+        <button id="btnAddQuestion" class="add-question-btn">Adicionar Critério</button>
+      </div>
+
+      <!-- Lista de Critérios -->
+      <div id="question-list" class="questions-container">
+        <!-- Critérios serão carregados aqui -->
+      </div>
+      
+      <!-- Botão para adicionar Empresa -->
+      <button class="add-empresa-btn" id="btnAddEmpresa">Adicionar Empresa à Tabela</button>
+    </div>
+
+    <!-- TABELA DE EMPRESAS -->
+    <div class="empresas-section">
+      <h2>Minhas Empresas</h2>
+      <table id="empresas-table">
+        <thead>
+          <tr>
+            <th>Ativo</th>
+            <th>Resistência</th>
+            <th>Recomendado</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div class="total-recomendado">
+        Total Recomendado: <span id="totalRecomendado">0.0</span>%
+      </div>
+    </div>
+  </div>
+
+  <!-- Firebase SDK (versão compat) -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+  <script src="script.js"></script>
+</body>
+</html> 
