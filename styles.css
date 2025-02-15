@@ -302,4 +302,153 @@ td[contenteditable="true"] {
 .add-empresa-btn {
   display: block;
   margin-top: 20px;
+}
+
+/* RESPONSIVIDADE */
+@media screen and (max-width: 768px) {
+  body {
+    padding-top: 120px; /* Aumenta o padding para acomodar o scoreboard em telas menores */
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  /* Ajusta o scoreboard para telas menores */
+  .scoreboard {
+    flex-direction: column;
+    height: auto;
+    padding: 5px;
+  }
+
+  .score-box {
+    margin: 5px;
+    width: 90%;
+  }
+
+  /* Ajusta o header da análise */
+  .analysis-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ativo-input {
+    width: 100%;
+  }
+
+  .ativo-input input[type="text"] {
+    width: 100%;
+  }
+
+  /* Ajusta os botões */
+  .add-question-btn,
+  .add-empresa-btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  /* Ajusta as linhas de critérios */
+  .question-row {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .question-label {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  /* Ajusta a tabela para telas pequenas */
+  .empresas-section {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 600px; /* Garante que a tabela não fique muito comprimida */
+  }
+
+  /* Ajusta os botões de edição */
+  .action-buttons-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .save-edit-btn,
+  .cancel-edit-btn {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+/* Para telas muito pequenas */
+@media screen and (max-width: 480px) {
+  body {
+    padding-top: 150px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .score-title {
+    font-size: 12px;
+  }
+
+  .score-value {
+    font-size: 16px;
+  }
+
+  /* Ajusta os botões na tabela */
+  td .edit-btn,
+  td .remove-btn {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  /* Ajusta o espaçamento dos elementos */
+  .analysis-section,
+  .empresas-section {
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+
+  /* Melhora a visualização dos toggles em telas pequenas */
+  .switch {
+    width: 40px;
+    height: 20px;
+  }
+
+  .slider:before {
+    height: 14px;
+    width: 14px;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(20px);
+  }
+}
+
+/* Para telas maiores que 1200px */
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  /* Aumenta um pouco o tamanho dos elementos para telas grandes */
+  .score-box {
+    padding: 15px 30px;
+  }
+
+  .score-value {
+    font-size: 24px;
+  }
+
+  .question-row {
+    padding: 15px 20px;
+  }
 } 
